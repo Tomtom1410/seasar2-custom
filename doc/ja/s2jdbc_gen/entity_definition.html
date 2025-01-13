@@ -1,0 +1,1299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<title>Seasar2 - S2JDBC-Gen - DDL生成のためのエンティティ定義</title>
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/main.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/print.css" media="print" />
+<link href="../css/maven-base.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="../css/maven-theme.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="../css/prettify.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="../js/prettify.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div class="line"><span class="hide">spacer</span></div>
+
+<div id="logo"><h1 id="h01" class="hide">The Seasar Project</h1><a href="http://www.seasar.org/" alt="The Seasar Project" title="The Seasar Project"><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Project" width="390" height="180" /></a></div>
+
+<div id="tool">
+
+<h2><a href="http://search.seasar.org/">Site Search</a></h2>
+
+<form id="search" action="http://search.seasar.org/">
+<div>
+	<input id="search_phrase" type="text" name="phrase" size="20" />
+	<input type="hidden" name="perpage" value="30" />
+	<input type="hidden" name="enc" value="UTF-8" />
+	<input id="search_go" type="submit" value="Search" />
+</div>
+</form>
+
+<h2>Seasar Banner</h2>
+            <a href="http://www.seasar.org/" id="bannerLeft">
+    
+                                    <img src="http://www.seasar.org/images/seasar_banner.gif" alt="" />
+    
+            </a>
+      
+</div>
+
+<div id="navi">
+	<p id="navi_left">  
+          <a href="http://www.seasar.org/">Seasar</a>
+              &gt;
+      
+          <a href="../">S2Container</a>
+          </p>
+	<p id="navi_right"><a href="../../en/">English</a> | <a href="../../ja/">Japanese</a></p>
+</div>
+
+</div><!-- header -->
+
+<div id="contents_left">
+           
+  
+
+  
+    
+  
+  
+                   <h2>About</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../index.html">ホーム</a>
+        </li>
+              
+    <li class="none">
+              <a href="../license.html">ライセンス</a>
+        </li>
+              
+    <li class="none">
+              <a href="../downloads.html">ダウンロード</a>
+        </li>
+              
+    <li class="none">
+              <a href="https://www.seasar.org/issues/browse/CONTAINER">課題追跡</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?ChangeLog%2FSeasar">ChangeLog</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?SeasarUpdateOperationLog">移行ガイド</a>
+        </li>
+          </ul>
+          <h2>ドキュメント</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../documents.html">一覧</a>
+        </li>
+              
+    <li class="none">
+              <a href="../setup.html">セットアップ</a>
+        </li>
+              
+    <li class="none">
+              <a href="../DIContainer.html">DIContainer</a>
+        </li>
+              
+    <li class="none">
+              <a href="../aop.html">AOP</a>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="../s2jdbc.html">S2JDBC</a>
+              </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+            
+            
+      
+            
+      
+              
+            <li class="expanded">
+              <a href="../s2jdbc_gen/index.html">S2JDBC-Gen</a>
+                <ul>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/setup.html">セットアップ</a>
+        </li>
+                  
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="../s2jdbc_gen/task.html">タスク</a>
+              </li>
+                  
+    <li class="none">
+              <strong>DDL生成のためのエンティティ定義</strong>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/file_format.html">ファイルの形式</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/svn.html">Subversion連携</a>
+        </li>
+              </ul>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2Container">FAQ (全般)</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2AOP">FAQ (AOP)</a>
+        </li>
+          </ul>
+          <h2>Javadoc</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../../s2-framework/ja/apidocs/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-extension/ja/apidocs/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-tiger/ja/apidocs/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>モジュール</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../index.html">Seasar2</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-framework/ja/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-extension/ja/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-tiger/ja/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>プロジェクト文書</h2>
+        <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="../project-info.html">プロジェクト情報</a>
+              </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy" name="poweredBy">
+            <img alt="Built by Maven" src="../images/logos/maven-feather.png" />
+          </a>
+                       
+  
+
+  
+    
+  
+  
+  </div><!-- contents_left -->
+
+<div id="contents_center">
+
+<div id="article">
+<div class="section"><h2><a name="DDL生成のためのエンティティ定義"></a>
+DDL生成のためのエンティティ定義</h2>
+<ul><li><a href="#概要">概要</a>
+</li>
+<li><a href="#テーブル定義">テーブル定義</a>
+<ul><li><a href="#カタログ名">カタログ名</a>
+</li>
+<li><a href="#スキーマ名">スキーマ名</a>
+</li>
+<li><a href="#テーブル名">テーブル名</a>
+</li>
+<li><a href="#複合一意キー">複合一意キー</a>
+</li>
+</ul>
+</li>
+<li><a href="#カラム定義">カラム定義</a>
+<ul><li><a href="#カラム名">カラム名</a>
+</li>
+<li><a href="#一意キー">一意キー</a>
+</li>
+<li><a href="#NOT NULL制約">NOT NULL制約</a>
+</li>
+<li><a href="#データ型">データ型</a>
+</li>
+<li><a href="#デフォルト値">デフォルト値</a>
+</li>
+<li><a href="#CHECK制約">CHECK制約</a>
+</li>
+</ul>
+</li>
+<li><a href="#主キー定義">主キー定義</a>
+</li>
+<li><a href="#主キーの自動生成に関する定義">主キーの自動生成に関する定義</a>
+<ul><li><a href="#データベース固有の自動生成を利用する定義">データベース固有の自動生成を利用する定義</a>
+</li>
+<li><a href="#テーブルを利用する定義">テーブルを利用する定義</a>
+</li>
+<li><a href="#シーケンスを利用する定義">シーケンスを利用する定義</a>
+</li>
+</ul>
+</li>
+<li><a href="#外部キー定義">外部キー定義</a>
+<ul><li><a href="#生成の制御">生成の制御</a>
+<ul><li><a href="#自動生成が有効な場合">自動生成が有効な場合</a>
+</li>
+<li><a href="#自動生成が無効な場合">自動生成が無効な場合</a>
+</li>
+</ul>
+</p>
+</li>
+<li><a href="#参照動作">参照動作</a>
+</li>
+</ul>
+</li>
+<li><a href="#コメント定義">コメント定義</a>
+</li>
+</ul>
+</div>
+<div class="section"><h2><a name="概要"></a>
+概要</h2>
+<p>
+				S2JDBC-Genでは、<a href="tasks/gen_ddl.html">Gen-Ddl</a>
+タスクを実行することで、エンティティ定義からDDLを出力できます。
+				ここでは、DDLの生成に大きく関わるエンティティクラスの定義方法を説明します。
+			</p>
+<p><a href="tasks/gen_ddl.html">Gen-Ddl</a>
+タスク生成できるDDLの種類には限りがあります。
+				ストアドプロシージャー、トリガー、ビューなどのDDLを扱うには、<a href="tasks/migrate.html">Migrate</a>
+タスクの<a href="tasks/migrate.html#任意のSQLの実行">任意のSQLの実行</a>
+を参照してください。
+			</p>
+<p>
+				S2JDBC実行時に関するエンティティ定義については<a href="../s2jdbc_entity.html">エンティティ</a>
+を参照してください。
+			</p>
+</div>
+<div class="section"><h2><a name="テーブル定義"></a>
+テーブル定義</h2>
+<p>
+				テーブルの定義はTableアノテーションを用いて行います。
+			</p>
+<p>
+				カタログ名、スキーマ名、テーブル名は、<a href="tasks/gen_ddl.html">Gen-Ddl</a>
+タスクで生成されるDDLファイルやダンプファイルの名前に使用されます。
+				したがって、カタログ名、スキーマ名、テーブル名にファイルシステムで扱えない文字を含めないでください。
+			</p>
+<div class="section"><h3><a name="カタログ名"></a>
+カタログ名</h3>
+<p>
+					catalog要素を使用することで、カタログ名を指定できます。
+				</p>
+<div class="source"><pre>@Table(catalog = &quot;CATALOG&quot;)
+public class Employee {
+    ....
+}</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table CATALOG.EMPLOYEE ...;</pre>
+</div>
+</div>
+<div class="section"><h3><a name="スキーマ名"></a>
+スキーマ名</h3>
+<p>
+					schema要素を使用することで、スキーマ名を指定できます。
+				</p>
+<div class="source"><pre>@Table(schema = &quot;SCHEMA&quot;)
+public class Employee {
+    ....
+}</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table SCHEMA.EMPLOYEE ...;</pre>
+</div>
+</div>
+<div class="section"><h3><a name="テーブル名"></a>
+テーブル名</h3>
+<p>
+					name要素を使用することで、テーブル名を指定できます。
+				</p>
+<div class="source"><pre>@Table(name = &quot;EMP&quot;)
+public class Employee {
+    ....
+}</pre>
+</div>
+<p>
+					上記の定義からは次のDDLが生成されます。
+				</p>
+<div class="source"><pre>create table EMP ...;</pre>
+</div>
+<p>
+					指定しない場合、テーブル名はエンティティ名と同じになります。
+					ただし、エンティティ名が、
+					<code>AaaBbb</code>
+					のようなキャメル記法の場合、テーブル名は、
+					<code>AAA_BBB</code>
+					のように
+					<code>'_'</code>
+					区切りだとみなされます。
+				</p>
+<p>
+					このルールは、
+					<code>convention.dicon</code>
+					で指定されている
+					<code>
+						org.seasar.framework.convention.impl.PersistenceNamingConventionImpl
+					</code>
+					の
+					<code>fromEntityNameToTableName()</code>
+					の実装を変えることで、カスタマイズできます。
+				</p>
+</div>
+<div class="section"><h3><a name="複合一意キー"></a>
+複合一意キー</h3>
+<p>
+					uniqueConstraints要素を使用することで、複合一意キー制約を指定できます。
+					（columnNames要素に指定する値を1つにすれば、単一の一意キー制約になります。）
+				</p>
+<div class="source"><pre>@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { &quot;FIRST_NAME&quot;, &quot;LAST_NAME&quot; }) })
+public class Employee {
+    ....
+}</pre>
+</div>
+
+上記の定義からは次のDDLが生成されます。
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_UK1 unique (FIRST_NAME, LAST_NAME);</pre>
+</div>
+</div>
+</div>
+<div class="section"><h2><a name="カラム定義"></a>
+カラム定義</h2>
+<p>
+				カラムの定義はColumnアノテーションを用いて行います。
+			</p>
+<div class="section"><h3><a name="カラム名"></a>
+カラム名</h3>
+<p>
+					name要素を使用することで、カラム名を指定できます。
+				</p>
+<div class="source"><pre>@Column(name = &quot;ENAME&quot;)
+public String employeeName;</pre>
+</div>
+<p>
+					上記の定義からは次のDDLが生成されます。
+				</p>
+<div class="source"><pre>create table ... (
+  ...
+  ENAME varchar(255),
+  ...
+);</pre>
+</div>
+<p>
+					指定しない場合、カラム名はフィールド名と同じになります。
+					ただし、フィールド名が、
+					<code>aaaBbb</code>
+					のようなキャメル記法の場合、カラム名は、
+					<code>AAA_BBB</code>
+					のように
+					<code>'_'</code>
+					区切りだとみなされます。
+				</p>
+<p>
+					このルールは、
+					<code>convention.dicon</code>
+					で指定されている
+					<code>
+						org.seasar.framework.convention.impl.PersistenceNamingConventionImpl
+					</code>
+					の
+					<code>fromPropertyNameToColumnName()</code>
+					の実装を変えることで、カスタマイズすることができます。
+				</p>
+<p>
+					デフォルトでは、プロパティ名とフィールド名は同じになりますが、
+					<code>convention.dicon</code>
+					で指定されている
+					<code>
+						org.seasar.framework.convention.impl.PersistenceNamingConventionImpl
+					</code>
+					の
+					<code>fromFieldNameToPropertyName()</code>
+					の実装を変えることで、カスタマイズすることができます。
+				</p>
+</div>
+<div class="section"><h3><a name="一意キー"></a>
+一意キー</h3>
+<p>
+					一意キー制約を指定するにはunique要素を使用します。
+				</p>
+<div class="source"><pre>@Column(unique = true)
+public String employeeName;</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table ... (
+  ...
+  EMPLOYEE_NAME varchar(100),
+  ...
+);</pre>
+</div>
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_UK1 unique (EMPLOYEE_NAME);</pre>
+</div>
+</div>
+<div class="section"><h3><a name="NOT_NULL制約"></a>
+NOT NULL制約</h3>
+<p>
+					NOT NULL制約を指定するにはnullable要素を使用します。
+				</p>
+<div class="source"><pre>@Column(nullable = false)
+public String employeeName;</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table ... (
+  ...
+  EMPLOYEE_NAME varchar(100) not null,
+  ...
+);</pre>
+</div>
+</div>
+<div class="section"><h3><a name="データ型"></a>
+データ型</h3>
+<p>
+					カラムのデータ型は長さのデフォルト値や2JDBC-Genのダイアレクトに従って自動で決定されます。
+					長さ、精度、スケールを指定する場合やデータ型を明記する場合は、Columnアノテーションを使用します。
+				</p>
+<div class="source"><pre>@Column(length = 20)
+public String employeeName;
+	
+@Column(precision = 10, scale = 2)
+public BigDecimal salary;</pre>
+</div>
+<p>
+					上記の定義により、EMPLOYEE_NAMEカラムは長さ20の文字列型、
+					SALARYカラムは精度が10、スケールが2の数値型として定義されます。
+					Columnアノテーションを指定しない場合や、length、precision、scaleを指定しない場合のそれぞれのデフォルト値は次の表のとおりです。
+				</p>
+<table class="bodyTable"><tr class="a"><th>要素</th>
+<th>説明</th>
+<th>デフォルト値</th>
+</tr>
+<tr class="b"><td>length</td>
+<td>長さ。文字列型やバイナリ型に使用される。</td>
+<td>255</td>
+</tr>
+<tr class="a"><td>precision</td>
+<td>精度。数値型に使用される。</td>
+<td>19</td>
+</tr>
+<tr class="b"><td>scale</td>
+<td>スケール。数値型に使用される。</td>
+<td>2</td>
+</tr>
+</table>
+<p>
+					以下に、エンティティクラスのプロパティの型と代表的なデータベースのカラムの型の対応表を示します。
+					$l、$p、$sには、Columnアノテーションで指定するlength、precision、scaleの値が設定されます。
+					（この表は、エンティティからDDLを生成する際の対応表です。データベースからエンティティを生成する際の対応表ではありません。）
+				</p>
+<table class="bodyTable"><tr class="a"><th>Javaの型</th>
+<th>Oracle Database</th>
+<th>SQL Server 2005</th>
+<th>DB2</th>
+<th>PostgreSQL</th>
+<th>MySQL</th>
+</tr>
+<tr class="b"><td>boolean/Boolean</td>
+<td>number(1,0)</td>
+<td>bit</td>
+<td>smallint</td>
+<td>bool</td>
+<td>boolean</td>
+</tr>
+<tr class="a"><td>short/Short</td>
+<td>number($p,0)</td>
+<td>smallint</td>
+<td>smallint</td>
+<td>smallint</td>
+<td>smallint</td>
+</tr>
+<tr class="b"><td>char/Character</td>
+<td>char(1)</td>
+<td>char(1)</td>
+<td>char(1)</td>
+<td>char(1)</td>
+<td>char(1)</td>
+</tr>
+<tr class="a"><td>int/Integer</td>
+<td>number($p,0)</td>
+<td>int</td>
+<td>integer</td>
+<td>integer/serial</td>
+<td>int</td>
+</tr>
+<tr class="b"><td>long/Long</td>
+<td>number($p,0)</td>
+<td>bigint</td>
+<td>bigint</td>
+<td>bigint/bigserial</td>
+<td>bigint</td>
+</tr>
+<tr class="a"><td>float/Float</td>
+<td>float</td>
+<td>float</td>
+<td>real</td>
+<td>float4</td>
+<td>float($p,$s)</td>
+</tr>
+<tr class="b"><td>double/Double</td>
+<td>double precision</td>
+<td>double</td>
+<td>double</td>
+<td>float8</td>
+<td>double($p,$s)</td>
+</tr>
+<tr class="a"><td>BigInteger</td>
+<td>number($p,0)</td>
+<td>bigint</td>
+<td>bigint</td>
+<td>bigint/bigserial</td>
+<td>bigint</td>
+</tr>
+<tr class="b"><td>BigDecimal</td>
+<td>number($p,$s)</td>
+<td>decimal($p,$s)</td>
+<td>decimal($p,$s)</td>
+<td>decimal($p,$s)</td>
+<td>decimal($p,$s)</td>
+</tr>
+<tr class="a"><td>String</td>
+<td>varchar2($l)</td>
+<td>varchar($l)</td>
+<td>varchar($l)</td>
+<td>varchar($l)</td>
+<td>varchar($l)</td>
+</tr>
+<tr class="b"><td>@LobつきString</td>
+<td>clob</td>
+<td>varchar(max)</td>
+<td>clob($l)</td>
+<td>text</td>
+<td>tinytext/text/mediumtext/longtext</td>
+</tr>
+<tr class="a"><td>byte[]</td>
+<td>raw</td>
+<td>varbinary($l)</td>
+<td>varchar($l) for bit data</td>
+<td>bytea</td>
+<td>binary($l)</td>
+</tr>
+<tr class="b"><td>@Lobつきbyte[]</td>
+<td>blob</td>
+<td>varbinary(max)</td>
+<td>blob($l)</td>
+<td>oid</td>
+<td>tinyblob/blob/mediumblob/longblob</td>
+</tr>
+<tr class="a"><td>Serializable</td>
+<td>raw</td>
+<td>varbinary($l)</td>
+<td>varchar($l) for bit data</td>
+<td>bytea</td>
+<td>binary($l)</td>
+</tr>
+<tr class="b"><td>@LobつきSerializable</td>
+<td>blob</td>
+<td>varbinary(max)</td>
+<td>blob($l)</td>
+<td>oid</td>
+<td>tinyblob/blob/mediumblob/longblob</td>
+</tr>
+<tr class="a"><td>java.sql.Time</td>
+<td>date</td>
+<td>datetime</td>
+<td>time</td>
+<td>time</td>
+<td>time</td>
+</tr>
+<tr class="b"><td>java.sql.Date</td>
+<td>date</td>
+<td>datetime</td>
+<td>date</td>
+<td>date</td>
+<td>date</td>
+</tr>
+<tr class="a"><td>java.sql.Timestamp</td>
+<td>timestamp</td>
+<td>datetime</td>
+<td>timestamp</td>
+<td>timestamp</td>
+<td>timestamp</td>
+</tr>
+<tr class="b"><td>@Temporal(TeporalType.TIME)つきjava.util.Date, <br />
+@Temporal(TeporalType.TIME)つきCalendar</td>
+<td>date</td>
+<td>datetime</td>
+<td>time</td>
+<td>time</td>
+<td>time</td>
+</tr>
+<tr class="a"><td>@Temporal(TeporalType.DATE)つきjava.util.Date, <br />
+@Temporal(TeporalType.DATE)つきCalendar</td>
+<td>date</td>
+<td>datetime</td>
+<td>date</td>
+<td>date</td>
+<td>date</td>
+</tr>
+<tr class="b"><td>@Temporal(TeporalType.TIMESTAMP)つきjava.util.Date, <br />
+@Temporal(TeporalType.TIMESTAMP)つきCalendar</td>
+<td>date</td>
+<td>datetime</td>
+<td>timestamp</td>
+<td>timestamp</td>
+<td>timestamp</td>
+</tr>
+<tr class="a"><td>Enum型, @Enumerated(EnumType.ORDINAL)つきEnum型</td>
+<td>number($p,0)</td>
+<td>int</td>
+<td>integer</td>
+<td>integer</td>
+<td>int</td>
+</tr>
+<tr class="b"><td>@Enumerated(EnumType.STRING)つきEnum型</td>
+<td>varchar2($l)</td>
+<td>varchar($l)</td>
+<td>varchar($l)</td>
+<td>varchar($l)</td>
+<td>int/varchar($l)</td>
+</tr>
+</table>
+<p>
+					ここで示されたもの以外のデータ型にマッピングしたい場合は、ColumnアノテーションのcolumnDefinition要素を使用します。
+				</p>
+<div class="source"><pre>@Column(columnDefinition =&quot;nvarchar(100)&quot;)
+public String employeeName;</pre>
+</div>
+<p>
+					columnDefinition要素を使用した場合は、指定した値がそのままテーブル作成のDDLに組み込まれます。
+					そのため、length、precision、scale要素の値は、参照されません。
+				</p>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table ... (
+  ...
+  EMPLOYEE_NAME nvarchar(100),
+  ...
+);</pre>
+</div>
+<div class="section"><h3><a name="デフォルト値"></a>
+デフォルト値</h3>
+<p>
+					デフォルト値を指定するにはcolumnDefinition要素を使用します。
+				</p>
+<div class="source"><pre>@Column(columnDefinition =&quot;default 'unknown'&quot;)
+public String employeeName;</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table ... (
+  ...
+  EMPLOYEE_NAME varchar(255) default 'unknown',
+  ...
+);</pre>
+</div>
+<p>
+					columnDefinition要素にデータ型を指定する場合は、その値の後ろに指定します。
+				</p>
+<div class="source"><pre>@Column(columnDefinition =&quot;nvarchar(100) default n'unknown'&quot;)
+public String employeeName;</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table ... (
+  ...
+  EMPLOYEE_NAME nvarchar(100) default n'unknown',
+  ...
+);</pre>
+</div>
+</div>
+<div class="section"><h3><a name="CHECK制約"></a>
+CHECK制約</h3>
+<p>
+					CHECK制約を指定するにはcolumnDefinition要素を使用します。
+				</p>
+<div class="source"><pre>@Column(columnDefinition =&quot;check ...&quot;)
+public String employeeName;</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table ... (
+  ...
+  EMPLOYEE_NAME varchar(255) check ...,
+  ...
+);</pre>
+</div>
+<p>
+					columnDefinition要素にデータ型を指定する場合は、その値の後ろに指定します。
+				</p>
+<div class="source"><pre>@Column(columnDefinition =&quot;nvarchar(100) check ...&quot;)
+public String employeeName;</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table ... (
+  ...
+  EMPLOYEE_NAME nvarchar(100) check ...,
+  ...
+);</pre>
+</div>
+</div>
+</div>
+<div class="section"><h2><a name="主キー定義"></a>
+主キー定義</h2>
+<p>
+				主キーの定義はIdアノテーションを用いて行います。
+			</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  ...
+}</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table Employee (
+  ID integer not null,
+  ...
+  constraint EMPLOYEE_PK primary key(ID)
+);</pre>
+</div>
+<p>
+				複合主キーの場合はIdアノテーションを複数用います。
+			</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id1;
+  @Id
+  public Integer id2;
+  ...
+}</pre>
+</div>
+<p>
+				上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table Employee (
+  ID1 integer not null,
+  ID2 integer not null,
+  ...
+  constraint EMPLOYEE_PK primary key(ID1, ID2)
+);</pre>
+</div>
+<p>
+				主キーのプロパティに指定された@Columnのunique要素やnullabl要素の値は使用されません。
+			</p>
+</div>
+<div class="section"><h2><a name="主キーの自動生成に関する定義"></a>
+主キーの自動生成に関する定義</h2>
+<p>
+				主キーの自動生成に関する定義はGeneratedValueアノテーションを用いて行います。
+			</p>
+<div class="section"><h3><a name="データベース固有の自動生成を利用する定義"></a>
+データベース固有の自動生成を利用する定義</h3>
+<p>
+					データベース固有の自動生成を利用するには、GeneratedValueのstrategy要素にGenerationType.IDENTITYを指定します。
+					データベースがデータベース固有の自動生成をサポートしている場合にのみ使用できます。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public Integer id;
+  ...
+}</pre>
+</div>
+<p>
+				MySQLでは、上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create table EMPLOYEE (
+  ID int not null auto_increment,
+  ...
+);</pre>
+</div>
+</div>
+<div class="section"><h3><a name="テーブルを利用する定義"></a>
+テーブルを利用する定義</h3>
+<p>
+					テーブルを利用するには、GeneratedValueのstrategy要素にGenerationType.TABLEを指定します。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  @GeneratedValue(strategy = GenerationType.TABLE)
+  public Integer id;
+  ...
+}</pre>
+</div>
+<p>
+					Oracleでは、上記の定義からは次のDDLが生成されます。このDDLは、EMPLOYEEテーブルに関するDDLとは別に生成されます。
+				</p>
+<div class="source"><pre>create table ID_GENERATOR (
+    PK varchar2(255) not null,
+    VALUE number(19, 0) not null,
+    constraint ID_GENERATOR_PK primary key(PK)
+);</pre>
+</div>
+<p>
+					TableGeneratorアノテーションを使ってテーブル名やカラム名をカスタマイズできます。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  @GeneratedValue(strategy = GenerationType.TABLE, generator = &quot;EMPLOYEE_GEN&quot;)
+  @TableGenerator(
+    name = &quot;EMPLOYEE_GEN&quot;,
+    table = &quot;ID_GEN&quot;,
+    pkColumnName = &quot;GEN_NAME&quot;,
+    valueColumnName = &quot;GEN_VALUE&quot;)
+  public Integer id;
+  ...
+}</pre>
+</div>
+<p>
+					Oracleでは、上記の定義からは次のDDLが生成されます。
+				</p>
+<div class="source"><pre>create table ID_GEN (
+    GEN_NAME varchar2(255) not null,
+    GEN_VALUE number(19, 0) not null,
+    constraint ID_GENERATOR_PK primary key(PK)
+);</pre>
+</div>
+</div>
+<div class="section"><h3><a name="シーケンスを利用する定義"></a>
+シーケンスを利用する定義</h3>
+<p>
+					シーケンスを利用するには、GeneratedValueのstrategy要素にGenerationType.SEQUENCEを指定します。
+					データベースがシーケンスをサポートしている場合にのみ使用できます。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  public Integer id;
+  ...
+}</pre>
+</div>
+<p>
+				Oracleでは、上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>create sequence EMPLOYEE_ID increment by 50 start with 1;</pre>
+</div>
+<p>
+					SequenceGeneratorアノテーションを使ってシーケンス名や初期値や割り当てサイズをカスタマイズできます。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  @GeneratedValue(strategy = GenerationType.TABLE, generator = &quot;EMPLOYEE_GEN&quot;)
+  @SequenceGenerator(
+    name = &quot;EMPLOYEE_GEN&quot;,
+    sequenceName = &quot;EMPLOYEE_SEQ&quot;
+    initialValue = 100
+    allocationSize = 10)
+  public Integer id;
+  ...
+}</pre>
+</div>
+<p>
+					Oracleでは、上記の定義からは次のDDLが生成されます。
+				</p>
+<div class="source"><pre>create sequence EMPLOYEE_SEQ increment by 10 start with 100;</pre>
+</div>
+</div>
+</div>
+<div class="section"><h2><a name="外部キー定義"></a>
+外部キー定義</h2>
+<div class="section"><h3><a name="生成の制御"></a>
+生成の制御</h3>
+<p>
+					外部キーの定義は関連プロパティに対応して生成されますが、定義方法は、外部キー制約の自動生成を有効にしているか無効にしているかで異なります。
+				</p>
+<p>
+					全てのエンティティに対する有効/無効は<a href="tasks/gen_ddl.html">Gen-Ddlタスク</a>
+のautoGenerateForeignKey属性で制御します。
+					デフォルトでは有効です。
+					無効にするには、<a href="tasks/gen_ddl.html#外部キー制約の自動生成を無効化する">外部キー制約の自動生成を無効化する</a>
+を参照してください。
+				</p>
+<p>
+					個々の関連プロパティごとに外部キー制約の生成を制御するには、<code>org.seasar.extension.jdbc.annotation.ReferentialConstraint</code>アノテーションの<code>enable</code>要素を利用します。
+				</p>
+<h4><a name="自動生成が有効な場合"></a>
+自動生成が有効な場合</h4>
+<p>
+					自動生成が有効な場合、関連の所有側のプロパティに対応するカラムはすべて外部キーとみなされます。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  public Integer departmentId;
+  public Integer addressId;
+  @ManyToOne
+  public Department department;
+  @OneToOne
+  public Address address;
+}</pre>
+</div>
+<p>
+					上記の定義からは、departmentプロパティに対応するDEPARTMENT_IDカラムと
+					addressプロパティに対応するADDRESS_IDカラムがそれぞれ外部キーとみなされ次のDDLが生成されます。
+				</p>
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_FK1 foreign key (DEPARTMENT_ID) references DEPARTMENT (ID);
+alter table EMPLOYEE add constraint EMPLOYEE_FK2 foreign key (ADDRESS_ID) references ADDRESS (ID);</pre>
+</div>
+<p>
+					複合外部キー制約を生成するにはJoinColumnsアノテーションを使用します。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  public Integer departmentId1;
+  public Integer departmentId2;
+  @ManyToOne
+  @JoinColumns( {
+    @JoinColumn(name = &quot;DEPARTMENT_ID1&quot;, referencedColumnName = &quot;ID1&quot;),
+    @JoinColumn(name = &quot;DEPARTMENT_ID2&quot;, referencedColumnName = &quot;ID2&quot;) })
+  public Department department;
+}</pre>
+</div>
+<p>
+					上記の定義からは次のDDLが生成されます。
+				</p>
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_FK1 foreign key (DEPARTMENT_ID1, DEPARTMENT_ID2) references DEPARTMENT (ID1, ID2);</pre>
+</div>
+<p>
+					関連プロパティに@ReferentialConstraintを指定しenable要素をfalseに指定することで、特定の外部キー制約の生成を抑制できます。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  public Integer departmentId;
+  public Integer addressId;
+  @ManyToOne
+  public Department department;
+  @ReferentialConstraint(enable = false)
+  @OneToOne
+  public Address address;
+}</pre>
+</div>
+<p>
+					addressプロパティに指定された<code>@ReferentialConstraint(enable = false)</code>に注目してください。
+					上記の定義では、DEPARTMENT_IDだけが外部キーとなりADDRESS_IDは外部キーになりません。
+					したがって、生成されるDDLは次のものになります。
+				</p>
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_FK1 foreign key (DEPARTMENT_ID) references DEPARTMENT (ID);</pre>
+</div>
+<p>
+					同様に複合外部キー制約の生成も抑制できます。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  public Integer departmentId1;
+  public Integer departmentId2;
+  @ReferentialConstraint(enable = false)
+  @ManyToOne
+  @JoinColumns( {
+    @JoinColumn(name = &quot;DEPARTMENT_ID1&quot;, referencedColumnName = &quot;ID1&quot;),
+    @JoinColumn(name = &quot;DEPARTMENT_ID2&quot;, referencedColumnName = &quot;ID2&quot;) })
+  public Department department;
+}</pre>
+</div>
+<p>
+					この例では、departmentプロパティに指定された<code>@ReferentialConstraint(enable = false)</code>により、外部キー制約のDDLは生成されません。
+				</p>
+<h4><a name="自動生成が無効な場合"></a>
+自動生成が無効な場合</h4>
+<p>
+					自動生成が無効な場合、<code>@ReferentialConstraint</code>を明示的に指定しない限り、外部キー制約の生成は行われません。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  public Integer departmentId;
+  public Integer addressId;
+  @ManyToOne
+  public Department department;
+  @ReferentialConstraint
+  @OneToOne
+  public Address address;
+}</pre>
+</div>
+<p>
+					addressプロパティに指定された<code>@ReferentialConstraint</code>に注目してください。
+					（<code>@ReferentialConstraint</code>は、<code>@ReferentialConstraint(enable = true)</code>と記述することもできます。）
+					上記の定義では、ADDRESS_IDだけが外部キーとなりDEPARTMENT_IDは外部キーになりません。
+					次のDDLが生成されます。
+				</p>
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_FK1 foreign key (ADDRESS_ID) references ADDRESS (ID);</pre>
+</div>
+<p><code>@ReferentialConstraint</code>を使って複合外部キー制約の生成を指定することも可能です。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  public Integer departmentId1;
+  public Integer departmentId2;
+  @ReferentialConstraint
+  @ManyToOne
+  @JoinColumns( {
+    @JoinColumn(name = &quot;DEPARTMENT_ID1&quot;, referencedColumnName = &quot;ID1&quot;),
+    @JoinColumn(name = &quot;DEPARTMENT_ID2&quot;, referencedColumnName = &quot;ID2&quot;) })
+  public Department department;
+}</pre>
+</div>
+<p>
+					上記の定義からは次のDDLが生成されます。
+				</p>
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_FK1 foreign key (DEPARTMENT_ID1, DEPARTMENT_ID2) references DEPARTMENT (ID1, ID2);</pre>
+</div>
+</div>
+<div class="section"><h3><a name="参照動作"></a>
+参照動作</h3>
+<p>
+					ReferentialConstraintアノテーションのonDelete要素やonUpdate要素に
+					参照動作を表す列挙型<code>org.seasar.extension.jdbc.annotation.ReferentialActionType</code>を指定できます。
+					<code>ReferentialActionType</code>は、SQL99で定められた5つの参照動作を定義します。
+					データベースによっては、すべての参照動作がサポートされていないことに注意してください。
+				</p>
+<div class="source"><pre>@Entity
+public class Employee {
+  @Id
+  public Integer id;
+  public Integer departmentId;
+  public Integer addressId;
+  @ReferentialConstraint(onDelete = ReferentialActionType.CASCADE, onUpdate = ReferentialActionType.RESTRICT)
+  @ManyToOne
+  public Department department;
+  @OneToOne
+  public Address address;
+}</pre>
+</div>
+<p>
+					departmentプロパティに指定された<code>@ReferentialConstraint</code>に注目してください。
+					上記の定義からは、次のDDLが生成されます。
+				</p>
+<div class="source"><pre>alter table EMPLOYEE add constraint EMPLOYEE_FK1 foreign key (DEPARTMENT_ID) references DEPARTMENT (ID) on delete cascade on update restrict;</pre>
+</div>
+</div>
+</div>
+<div class="section"><h2><a name="コメント定義"></a>
+コメント定義</h2>
+<p>
+				JavaDocコメントをデータベースのテーブルやカラムに対するコメントとして使用できます。
+				サポートしているデータベースは、Oracle、DB2、PostgreSQL、MySQL、H2です。
+				この機能を利用するには、<a href="tasks/gen_ddl.html#エンティティのJavaDocコメントをテーブル作成用のDDLファイルに反映させる">エンティティのJavaDocコメントをテーブル作成用のDDLファイルに反映させる例</a>
+を参照してください。
+			</p>
+<p>
+				クラスのJavaDocコメントがテーブル、フィールドのJavaDocコメントがカラムに対するコメントになります。
+			</p>
+<div class="source"><pre>/**
+ * 従業員
+ */
+@Entity
+public class Employee {
+  /** 主キー */
+  @Id
+  public Integer id;
+  /** 従業員名 */
+  public Integer employeeName;
+}</pre>
+</div>
+<p>
+				Oracleでは、上記の定義からは次のDDLが生成されます。
+			</p>
+<div class="source"><pre>comment on table EMPLOYEE is '従業員';
+comment on column EMPLOYEE.ID is '主キー';
+comment on column EMPLOYEE.EMPLOYEE_NAME is '従業員名';
+</pre>
+</div>
+</div>
+
+</div><!-- article -->
+
+</div><!-- contents_center -->
+
+<div id="footer">
+<address>  &copy; Copyright 
+                    <a href="http://www.seasarfoundation.org/">The Seasar Foundation</a>.
+            and the others
+    
+              2004-2014,
+        all rights reserved.
+  <a href="http://www.seasar.org">The Seasar Project</a>.
+</address>
+<div class="line"><span class="hide">spacer</span></div>
+</div><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+-classpath 'C:/Users/koichik/git/seasarorg/seasar2/seasar2/s2-extension/target/classes;C:/Users/koichik/repository/junit/junit/3.8.2/junit-3.8.2.jar;C:/Users/koichik/repository/org/seasar/container/s2-framework/2.4.48/s2-framework-2.4.48.jar;C:/Users/koichik/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.0/geronimo-jta_1.1_spec-1.0.jar;C:/Users/koichik/repository/org/apache/geronimo/specs/geronimo-j2ee_1.4_spec/1.0/geronimo-j2ee_1.4_spec-1.0.jar;C:/Users/koichik/repository/org/apache/poi/poi/3.0-FINAL/poi-3.0-FINAL.jar;C:/Users/koichik/repository/commons-logging/commons-logging/1.1/commons-logging-1.1.jar;C:/Users/koichik/repository/ognl/ognl/2.6.9-patch-20090427/ognl-2.6.9-patch-20090427.jar;C:/Users/koichik/repository/portlet-api/portlet-api/1.0/portlet-api-1.0.jar;C:/Users/koichik/repository/jboss/javassist/3.4.ga/javassist-3.4.ga.jar;C:/Users/koichik/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar;C:/Users/koichik/repository/com/ibm/websphere/uow_api/6/uow_api-6.jar'
+ -encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/koichik/git/seasarorg/seasar2/seasar2/s2-extension/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2004-2014 <a href="http://www.seasarfoundation.org/">The Seasar Foundation</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/koichik/git/seasarorg/seasar2/seasar2/s2-extension/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Seasar2 Extension 2.4.48 API'
+-group
+'S2Dataset' 'org.seasar.extension.dataset*'
+-group
+'S2DBCP' 'org.seasar.extension.dbcp*'
+-group
+'S2Dxo' 'org.seasar.extension.dxo*'
+-group
+'S2JDBC' 'org.seasar.extension.jdbc*'
+-group
+'S2JTA' 'org.seasar.extension.jta*'
+-group
+'S2Tx' 'org.seasar.extension.tx*'
+-group
+'S2Unit' 'org.seasar.extension.unit*'
+-link
+'http://download.oracle.com/javaee/6/api'
+-link
+'http://java.sun.com/javase/ja/6/docs/ja/api'
+-link
+'http://aopalliance.sourceforge.net/doc'
+-link
+'http://jakarta.apache.org/commons/logging/apidocs'
+-link
+'http://www.csg.is.titech.ac.jp/~chiba/javassist/html'
+-link
+'http://s2container.seasar.org/2.4/s2-framework/ja/apidocs'
+-link
+'http://s2container.seasar.org/2.4/s2-extension/ja/apidocs'
+-link
+'http://s2container.seasar.org/2.4/s2-tiger/ja/apidocs'
+-use
+-version
+-windowtitle
+'Seasar2 Extension 2.4.48 API'

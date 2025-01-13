@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<title>Seasar2 - S2JDBC-Gen - タスク</title>
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/main.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/print.css" media="print" />
+<link href="../css/maven-base.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="../css/maven-theme.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="../css/prettify.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="../js/prettify.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div class="line"><span class="hide">spacer</span></div>
+
+<div id="logo"><h1 id="h01" class="hide">The Seasar Project</h1><a href="http://www.seasar.org/" alt="The Seasar Project" title="The Seasar Project"><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Project" width="390" height="180" /></a></div>
+
+<div id="tool">
+
+<h2><a href="http://search.seasar.org/">Site Search</a></h2>
+
+<form id="search" action="http://search.seasar.org/">
+<div>
+	<input id="search_phrase" type="text" name="phrase" size="20" />
+	<input type="hidden" name="perpage" value="30" />
+	<input type="hidden" name="enc" value="UTF-8" />
+	<input id="search_go" type="submit" value="Search" />
+</div>
+</form>
+
+<h2>Seasar Banner</h2>
+            <a href="http://www.seasar.org/" id="bannerLeft">
+    
+                                    <img src="http://www.seasar.org/images/seasar_banner.gif" alt="" />
+    
+            </a>
+      
+</div>
+
+<div id="navi">
+	<p id="navi_left">  
+          <a href="http://www.seasar.org/">Seasar</a>
+              &gt;
+      
+          <a href="../">S2Container</a>
+          </p>
+	<p id="navi_right"><a href="../../en/">English</a> | <a href="../../ja/">Japanese</a></p>
+</div>
+
+</div><!-- header -->
+
+<div id="contents_left">
+           
+  
+
+  
+    
+  
+  
+                   <h2>About</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../index.html">ホーム</a>
+        </li>
+              
+    <li class="none">
+              <a href="../license.html">ライセンス</a>
+        </li>
+              
+    <li class="none">
+              <a href="../downloads.html">ダウンロード</a>
+        </li>
+              
+    <li class="none">
+              <a href="https://www.seasar.org/issues/browse/CONTAINER">課題追跡</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?ChangeLog%2FSeasar">ChangeLog</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?SeasarUpdateOperationLog">移行ガイド</a>
+        </li>
+          </ul>
+          <h2>ドキュメント</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../documents.html">一覧</a>
+        </li>
+              
+    <li class="none">
+              <a href="../setup.html">セットアップ</a>
+        </li>
+              
+    <li class="none">
+              <a href="../DIContainer.html">DIContainer</a>
+        </li>
+              
+    <li class="none">
+              <a href="../aop.html">AOP</a>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="../s2jdbc.html">S2JDBC</a>
+              </li>
+              
+                
+              
+      
+            
+            
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+              <a href="../s2jdbc_gen/index.html">S2JDBC-Gen</a>
+                <ul>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/setup.html">セットアップ</a>
+        </li>
+                  
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+              <strong>タスク</strong>
+                <ul>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_entity.html">Gen-Entity</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_ddl.html">Gen-Ddl</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/migrate.html">Migrate</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_names.html">Gen-Names</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_service.html">Gen-Service</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_condition.html">Gen-Condition</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_sqlfileconstants.html">Gen-SqlFileConstants</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_entitytest.html">Gen-EntityTest</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_servicetest.html">Gen-ServiceTest</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/gen_sqlfiletest.html">Gen-SqlFileTest</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/dump_dbmeta.html">Dump-DbMeta</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/dump_data.html">Dump-Data</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/load_data.html">Load-Data</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/exec_sql.html">Exec-Sql</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/tasks/refresh.html">Refresh</a>
+        </li>
+              </ul>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/entity_definition.html">DDL生成のためのエンティティ定義</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/file_format.html">ファイルの形式</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../s2jdbc_gen/svn.html">Subversion連携</a>
+        </li>
+              </ul>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2Container">FAQ (全般)</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2AOP">FAQ (AOP)</a>
+        </li>
+          </ul>
+          <h2>Javadoc</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../../s2-framework/ja/apidocs/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-extension/ja/apidocs/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-tiger/ja/apidocs/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>モジュール</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../index.html">Seasar2</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-framework/ja/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-extension/ja/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../s2-tiger/ja/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>プロジェクト文書</h2>
+        <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="../project-info.html">プロジェクト情報</a>
+              </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy" name="poweredBy">
+            <img alt="Built by Maven" src="../images/logos/maven-feather.png" />
+          </a>
+                       
+  
+
+  
+    
+  
+  
+  </div><!-- contents_left -->
+
+<div id="contents_center">
+
+<div id="article">
+<div class="section"><h2><a name="タスク"></a>
+タスク</h2>
+<p></p>
+<ul><li><a href="#タスクの一覧">タスクの一覧</a>
+</li>
+<li><a href="#タスクの使用例">タスクの使用例</a>
+</li>
+</ul>
+</div>
+<div class="section"><h2><a name="タスクの一覧"></a>
+タスクの一覧</h2>
+<p>
+				S2JDBC-Genでは以下のタスクを提供します。
+			</p>
+<div class="section"><h3><a name="コアタスク"></a>
+コアタスク</h3>
+<table class="bodyTable"><tr class="a"><th>タスク名</th>
+<th>説明</th>
+</tr>
+<tr class="b"><td><a href="tasks/gen_entity.html">Gen-Entity</a>
+</td>
+<td>データベースのテーブルからエンティティクラスのJavaコードを生成するタスクです。</td>
+</tr>
+<tr class="a"><td><a href="tasks/gen_ddl.html">Gen-Ddl</a>
+</td>
+<td>エンティティクラスからバージョン管理されたDDLを生成するタスクです。</td>
+</tr>
+<tr class="b"><td><a href="tasks/migrate.html">Migrate</a>
+</td>
+<td>バージョン管理されたDDLを使いデータベーススキーマのマイグレーションを実行するタスクです。</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="オプションタスク"></a>
+オプションタスク</h3>
+<table class="bodyTable"><tr class="a"><th>タスク名</th>
+<th>説明</th>
+</tr>
+<tr class="b"><td><a href="tasks/gen_names.html">Gen-Names</a>
+</td>
+<td>エンティティクラスから名前クラス（Namesクラス）のJavaコードを生成するクラスです。名前クラスはエンティティのプロパティ名に対応するメソッドをもつクラスです。JdbcManagerを使った問い合わせで名前クラスを使用することで、結合条件や検索条件をタイプセーフに指定できます。</td>
+</tr>
+<tr class="a"><td><a href="tasks/gen_service.html">Gen-Service</a>
+</td>
+<td>エンティティクラスからサービスクラス（Serviceクラス）のJavaコードを生成するクラスです。サービスクラスはエンティティの問い合わせを簡略化するメソッドを提供します。</td>
+</tr>
+<tr class="b"><td><a href="tasks/gen_condition.html">Gen-Condition</a>
+</td>
+<td>エンティティクラスから条件クラス（Conditionクラス）のJavaコードを生成するタスクです。条件クラスを使用すると、S2JDBCを使った検索条件をタイプセーフに指定できます。条件クラスよりも名前クラスを使用することを推奨します。</td>
+</tr>
+<tr class="a"><td><a href="tasks/gen_sqlfileconstants.html">Gen-SqlFileConstants</a>
+</td>
+<td>SQLファイルの定数クラスのJavaコードを生成するクラスです。定数クラスでは、SQLファイルのパスを定数フィールドとして持ちます。</td>
+</tr>
+<tr class="b"><td><a href="tasks/gen_entitytest.html">Gen-EntityTest</a>
+</td>
+<td>エンティティクラスのテスト用Javaコードを生成するタスクです。テストクラスではエンティティを使って実際にデータベースアクセスを行います。</td>
+</tr>
+<tr class="a"><td><a href="tasks/gen_servicetest.html">Gen-ServiceTest</a>
+</td>
+<td>サービスクラスのテスト用Javaコードを生成するクラスです。</td>
+</tr>
+<tr class="b"><td><a href="tasks/gen_sqlfiletest.html">Gen-SqlFileTest</a>
+</td>
+<td>SQLファイルのテスト用Javaコードを生成するクラスです。テストクラスではSQLファイルを使って実際にデータベースアクセスを行います。</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="ユーティリティタスク"></a>
+ユーティリティタスク</h3>
+<table class="bodyTable"><tr class="a"><th>タスク名</th>
+<th>説明</th>
+</tr>
+<tr class="b"><td><a href="tasks/dump_dbmeta.html">Dump-DbMeta</a>
+</td>
+<td>テーブルやカラムのメタデータをダンプするタスクです。主にS2JDBC-Genの開発者が利用することを想定しています。</td>
+</tr>
+<tr class="a"><td><a href="tasks/dump_data.html">Dump-Data</a>
+</td>
+<td>データベースのデータをCSV形式でダンプするタスクです。ダンプの機能はGen-Ddlタスクに含まれていますが、Gen-Ddlタスクとは別にダンプを行いたい場合に使用できます。</td>
+</tr>
+<tr class="b"><td><a href="tasks/load_data.html">Load-Data</a>
+</td>
+<td>CSV形式のダンプファイルをロードするタスクです。ロードの機能はMigrateタスクに含まれていますが、Migrateタスクとは別にロードを行いたい場合に使用できます。</td>
+</tr>
+<tr class="a"><td><a href="tasks/exec_sql.html">Exec-Sql</a>
+</td>
+<td>SQLファイルに含まれた任意のSQLを実行するタスクです。</td>
+</tr>
+<tr class="b"><td><a href="tasks/refresh.html">Refresh</a>
+</td>
+<td><a href="http://resourcesynchronizer.sandbox.seasar.org/ja/" class="externalLink">ResourceSynchronizer</a>
+にリクエストを投げるタスクです。</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="section"><h2><a name="タスクの使用例"></a>
+タスクの使用例</h2>
+<p>
+				タスクは組み合わせて使用します。
+			</p>
+<p>
+				以下の定義は、S2JDBC-Genの配布ファイルで提供しているサンプル用ビルドファイル（resources/s2jdbc-gen-build.xml）の内容です。
+				タスクを組み合わせ5つのターゲットを定義しています。
+			</p>
+<div class="source"><pre>&lt;project name=&quot;example-s2jdbc-gen&quot; default=&quot;gen-ddl&quot; basedir=&quot;.&quot;&gt;
+
+  &lt;property name=&quot;classpathdir&quot; value=&quot;src/main/webapp/WEB-INF/classes&quot;/&gt;
+  &lt;property name=&quot;rootpackagename&quot; value=&quot;example&quot;/&gt;
+  &lt;property name=&quot;entitypackagename&quot; value=&quot;entity&quot;/&gt;
+  &lt;property name=&quot;entityfilepattern&quot; value=&quot;example/entity/**/*.java&quot;/&gt;
+  &lt;property name=&quot;javafiledestdir&quot; value=&quot;src/main/java&quot;/&gt;
+  &lt;property name=&quot;testjavafiledestdir&quot; value=&quot;src/test/java&quot;/&gt;
+  &lt;property name=&quot;javafileencoding&quot; value=&quot;UTF-8&quot;/&gt;
+  &lt;property name=&quot;version&quot; value=&quot;latest&quot;/&gt;
+  &lt;property name=&quot;sqlfilepattern&quot; value=&quot;META-INF/sql/**/*.sql&quot;/&gt;
+  &lt;property name=&quot;applyenvtoversion&quot; value=&quot;false&quot;/&gt;
+  &lt;property name=&quot;uses2junit4&quot; value=&quot;false&quot;/&gt;
+  &lt;property name=&quot;env&quot; value=&quot;ut&quot;/&gt;
+  &lt;property name=&quot;jdbcmanagername&quot; value=&quot;jdbcManager&quot;/&gt;
+  &lt;condition property=&quot;vmarg.encoding&quot; value=&quot;-Dfile.encoding=UTF-8&quot; else=&quot;&quot;&gt;
+    &lt;isset property=&quot;eclipse.pdebuild.home&quot;/&gt;
+  &lt;/condition&gt;
+
+  &lt;path id=&quot;classpath&quot;&gt;
+    &lt;pathelement location=&quot;${classpathdir}&quot;/&gt;
+    &lt;fileset dir=&quot;src/main/webapp/WEB-INF/lib&quot;&gt;
+      &lt;exclude name=&quot;src/main/webapp/WEB-INF/lib/sources/**&quot;/&gt;
+    &lt;/fileset&gt;
+    &lt;fileset dir=&quot;lib&quot;&gt;
+      &lt;exclude name=&quot;lib/sources/**&quot;/&gt;
+    &lt;/fileset&gt;
+  &lt;/path&gt;
+
+  &lt;taskdef resource=&quot;s2jdbc-gen-task.properties&quot; classpathref=&quot;classpath&quot;/&gt;
+
+  &lt;target name=&quot;gen-entity&quot;&gt;
+    &lt;gen-entity
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      javafiledestdir=&quot;${javafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-entity&gt;
+    &lt;javac 
+      srcdir=&quot;${javafiledestdir}&quot;
+      destdir=&quot;${classpathdir}&quot;
+      encoding=&quot;${javafileencoding}&quot;
+      fork=&quot;true&quot;
+      debug=&quot;on&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;include name=&quot;${entityfilepattern}&quot;/&gt;
+    &lt;/javac&gt;
+    &lt;gen-names
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      javafiledestdir=&quot;${javafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-names&gt;
+    &lt;gen-service
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      javafiledestdir=&quot;${javafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-service&gt;
+    &lt;gen-sqlfileconstants
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      javafiledestdir=&quot;${javafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;sqlfileset dir=&quot;${classpathdir}&quot;&gt;
+          &lt;include name=&quot;${sqlfilepattern}&quot; /&gt;
+        &lt;/sqlfileset&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-sqlfileconstants&gt;
+    &lt;gen-entitytest
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      javafiledestdir=&quot;${testjavafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      uses2junit4=&quot;${uses2junit4}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-entitytest&gt;
+    &lt;gen-servicetest
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      javafiledestdir=&quot;${testjavafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      uses2junit4=&quot;${uses2junit4}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-servicetest&gt;
+    &lt;gen-sqlfiletest
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      javafiledestdir=&quot;${testjavafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      uses2junit4=&quot;${uses2junit4}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;sqlfileset dir=&quot;${classpathdir}&quot;&gt;
+          &lt;include name=&quot;${sqlfilepattern}&quot; /&gt;
+        &lt;/sqlfileset&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-sqlfiletest&gt;
+  &lt;/target&gt;
+
+  &lt;target name=&quot;gen-ddl&quot;&gt;
+    &lt;gen-ddl
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-ddl&gt;
+    &lt;gen-names
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      javafiledestdir=&quot;${javafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-names&gt;
+    &lt;gen-service
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      javafiledestdir=&quot;${javafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-service&gt;
+    &lt;gen-sqlfileconstants
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      javafiledestdir=&quot;${javafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;sqlfileset dir=&quot;${classpathdir}&quot;&gt;
+          &lt;include name=&quot;${sqlfilepattern}&quot; /&gt;
+        &lt;/sqlfileset&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-sqlfileconstants&gt;
+    &lt;gen-entitytest
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      javafiledestdir=&quot;${testjavafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      uses2junit4=&quot;${uses2junit4}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-entitytest&gt;
+    &lt;gen-servicetest
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      javafiledestdir=&quot;${testjavafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      uses2junit4=&quot;${uses2junit4}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-servicetest&gt;
+    &lt;gen-sqlfiletest
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      javafiledestdir=&quot;${testjavafiledestdir}&quot;
+      javafileencoding=&quot;${javafileencoding}&quot;
+      uses2junit4=&quot;${uses2junit4}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;sqlfileset dir=&quot;${classpathdir}&quot;&gt;
+          &lt;include name=&quot;${sqlfilepattern}&quot; /&gt;
+        &lt;/sqlfileset&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/gen-sqlfiletest&gt;
+  &lt;/target&gt;
+
+  &lt;target name=&quot;migrate&quot;&gt;
+    &lt;migrate
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      applyenvtoversion=&quot;${applyenvtoversion}&quot;
+      version=&quot;${version}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/migrate&gt;
+    &lt;refresh projectName=&quot;${projectname}&quot;/&gt;
+  &lt;/target&gt;
+
+  &lt;target name=&quot;rollback&quot;&gt;
+    &lt;migrate
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      applyenvtoversion=&quot;${applyenvtoversion}&quot;
+      version=&quot;previous&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/migrate&gt;
+  &lt;/target&gt;
+
+  &lt;target name=&quot;dump&quot;&gt;
+    &lt;dump-data
+      classpathdir=&quot;${classpathdir}&quot;
+      rootpackagename=&quot;${rootpackagename}&quot;
+      applyenvtoversion=&quot;${applyenvtoversion}&quot;
+      entitypackagename=&quot;${entitypackagename}&quot;
+      env=&quot;${env}&quot;
+      jdbcmanagername=&quot;${jdbcmanagername}&quot;
+      classpathref=&quot;classpath&quot;&gt;
+        &lt;jvmarg value=&quot;${vmarg.encoding}&quot;/&gt;
+    &lt;/dump-data&gt;
+  &lt;/target&gt;
+
+&lt;/project&gt;</pre>
+</div>
+<p>
+				各ターゲットの役割を説明します。
+			</p>
+<table class="bodyTable"><tr class="a"><th>ターゲット名</th>
+<th>説明</th>
+</tr>
+<tr class="b"><td>gen-entity</td>
+<td>データベースからエンティティクラスを生成し、エンティティクラスから名前クラス、サービスクラス、各種テストクラスのコードを生成します。このターゲットは、データベーススキーマがすでに存在する場合に、最初の一度だけ実行されることを想定しています。</td>
+</tr>
+<tr class="a"><td>gen-ddl</td>
+<td>エンティティクラスからDDLを生成します。また、名前クラス、サービスクラス、各種テストクラスのコードを再生成します（既存のものを上書きする/しないは各タスクによって決まります）。このターゲットは、データベースリファクタリング（エンティティの修正）を行うたびに実行されることを想定しています。エンティティを新規に作成する場合も、このターゲットを使用します。</td>
+</tr>
+<tr class="b"><td>migrate</td>
+<td>gen-ddlターゲットで生成したDDLを使用し、データベーススキーマのマイグレーションを実行します。デフォルトでは、最新のDDLを使ったマイグレーションを行います。</td>
+</tr>
+<tr class="a"><td>rollback</td>
+<td>データベーススキーマのバージョンを1つ前に戻します。</td>
+</tr>
+<tr class="b"><td>dump</td>
+<td>データベースのデータをCSV形式でダンプします。通常、ダンプはgen-ddlターゲットで行われますが、個別にダンプを実行したい場合にこのターゲットを使用します。デフォルトでは、ダンプファイルは最新バージョンのデータを管理するディレクトリに出力されます。migrateターゲットを実行することでロードできます。</td>
+</tr>
+</table>
+<p>
+				このビルドファイルを使用するにあたっては、propertyやpathの値を環境に合わせてカスタマイズし利用してください。
+			</p>
+<p>
+				gen-entityターゲットでは、エンティティクラスのJavaファイルのみをコンパイルしています。
+				生成されたJavaファイルすべてをコンパイルするには、EclipseのようなIDEで行うか、ビルドファイルをカスタマイズして別途Javacタスクで実行してください。
+			</p>
+<p><a href="setup.html#Doltengの利用">Doltengを使用する</a>
+場合は、このビルドファイルと同等のビルドファイルを自動生成できるので、そちらを利用してください。
+				Doltengが環境に応じたビルドファイルを生成するため、propertyやpathの値を修正する必要がありません。
+			</p>
+</div>
+
+</div><!-- article -->
+
+</div><!-- contents_center -->
+
+<div id="footer">
+<address>  &copy; Copyright 
+                    <a href="http://www.seasarfoundation.org/">The Seasar Foundation</a>.
+            and the others
+    
+              2004-2014,
+        all rights reserved.
+  <a href="http://www.seasar.org">The Seasar Project</a>.
+</address>
+<div class="line"><span class="hide">spacer</span></div>
+</div><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>

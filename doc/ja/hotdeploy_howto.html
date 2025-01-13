@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<title>Seasar2 - SMART deploy - </title>
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/main.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/print.css" media="print" />
+<link href="./css/maven-base.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="./css/maven-theme.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="./css/prettify.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="./js/prettify.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div class="line"><span class="hide">spacer</span></div>
+
+<div id="logo"><h1 id="h01" class="hide">The Seasar Project</h1><a href="http://www.seasar.org/" alt="The Seasar Project" title="The Seasar Project"><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Project" width="390" height="180" /></a></div>
+
+<div id="tool">
+
+<h2><a href="http://search.seasar.org/">Site Search</a></h2>
+
+<form id="search" action="http://search.seasar.org/">
+<div>
+	<input id="search_phrase" type="text" name="phrase" size="20" />
+	<input type="hidden" name="perpage" value="30" />
+	<input type="hidden" name="enc" value="UTF-8" />
+	<input id="search_go" type="submit" value="Search" />
+</div>
+</form>
+
+<h2>Seasar Banner</h2>
+            <a href="http://www.seasar.org/" id="bannerLeft">
+    
+                                    <img src="http://www.seasar.org/images/seasar_banner.gif" alt="" />
+    
+            </a>
+      
+</div>
+
+<div id="navi">
+	<p id="navi_left">  
+          <a href="http://www.seasar.org/">Seasar</a>
+              &gt;
+      
+          S2Container
+          </p>
+	<p id="navi_right"><a href="./../en/">English</a> | <a href="./../ja/">Japanese</a></p>
+</div>
+
+</div><!-- header -->
+
+<div id="contents_left">
+           
+  
+
+  
+    
+  
+  
+                   <h2>About</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="index.html">ホーム</a>
+        </li>
+              
+    <li class="none">
+              <a href="license.html">ライセンス</a>
+        </li>
+              
+    <li class="none">
+              <a href="downloads.html">ダウンロード</a>
+        </li>
+              
+    <li class="none">
+              <a href="https://www.seasar.org/issues/browse/CONTAINER">課題追跡</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?ChangeLog%2FSeasar">ChangeLog</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?SeasarUpdateOperationLog">移行ガイド</a>
+        </li>
+          </ul>
+          <h2>ドキュメント</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="documents.html">一覧</a>
+        </li>
+              
+    <li class="none">
+              <a href="setup.html">セットアップ</a>
+        </li>
+              
+    <li class="none">
+              <a href="DIContainer.html">DIContainer</a>
+        </li>
+              
+    <li class="none">
+              <a href="aop.html">AOP</a>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="s2jdbc.html">S2JDBC</a>
+              </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="s2jdbc_gen/index.html">S2JDBC-Gen</a>
+              </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2Container">FAQ (全般)</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2AOP">FAQ (AOP)</a>
+        </li>
+          </ul>
+          <h2>Javadoc</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../s2-framework/ja/apidocs/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-extension/ja/apidocs/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-tiger/ja/apidocs/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>モジュール</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="index.html">Seasar2</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-framework/ja/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-extension/ja/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-tiger/ja/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>プロジェクト文書</h2>
+        <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="project-info.html">プロジェクト情報</a>
+              </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy" name="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png" />
+          </a>
+                       
+  
+
+  
+    
+  
+  
+  </div><!-- contents_left -->
+
+<div id="contents_center">
+
+<div id="article">
+<div class="section"><h2><a name=""></a>
+</h2>
+<ul><li><a href="#概要">概要</a>
+</li>
+<li><a href="#HOT_deployの仕組み">HOT deployの仕組み</a>
+</li>
+<li><a href="#自動登録">自動登録</a>
+</li>
+<li><a href="#パッケージ構成">パッケージ構成</a>
+</li>
+<li><a href="#継承">継承</a>
+</li>
+<li><a href="#セッション">セッション</a>
+</li>
+</ul>
+</div>
+<div class="section"><h2><a name="概要"></a>
+概要</h2>
+<p>
+				このドキュメントでは，SMART deployの概要を説明し，
+				はまらないで使いこなすための指針を紹介します．
+			</p>
+<div class="section"><h3><a name="SMART_deployとは"></a>
+SMART deployとは</h3>
+<p>
+					SMART deployとは，規約に基づいてコンポーネントを自動登録するものです．
+				</p>
+</div>
+<div class="section"><h3><a name="SMART_deployの種類"></a>
+SMART deployの種類</h3>
+<p>
+					SMART deployには，以下の3種類のモードがあります．
+				</p>
+<dl><dt>HOT deploy</dt>
+<dd>
+						コンポーネントが必要とされたときに (on demandで) そのコンポーネントだけを自動登録するモードです．
+						<br />
+
+						コンポーネントのクラスをHOT deploy専用のクラスローダにロードすることで，
+						WEBコンテナの再起動や再デプロイをすることなく，クラスの変更が反映されます．
+						<br />
+
+						Webアプリケーションなど，
+						サーバとしてプロセスを起動したまま実行するプログラムの開発時に適したモードです．
+					</dd>
+<dt>COOL deploy</dt>
+<dd>
+						コンテナの初期化時に全てのコンポーネントを自動登録するモードです．
+						<br />
+
+						サーバアプリケーションの実行に適したモードです．
+					</dd>
+<dt>WARM deploy</dt>
+<dd>
+						コンポーネントが必要とされたときに (on demandで) そのコンポーネントだけを自動登録するモードです．
+						<br />
+
+						HOT
+						deployとは異なり，専用のクラスローダは使用しません．
+						一度ロードされたクラスは，.classファイルが変更されても反映されません．
+						<br />
+
+						クライアントアプリケーションやテストケースの実行に適したモードです．
+					</dd>
+</dl>
+<p>
+					SMART deployのモードを切り替える方法は
+					<a href="DIContainer.html#SMARTdeployS2ContainerDicon">SMART deployの切り替え</a>
+
+					を参照してください．
+				</p>
+</div>
+</div>
+<div class="section"><h2><a name="HOT_deployの仕組み"></a>
+HOT deployの仕組み</h2>
+<p></p>
+<div class="section"><h3><a name="クラスローダ"></a>
+クラスローダ</h3>
+<p>
+					Javaのクラスはクラスローダにロードされます．
+					クラスローダに一度ロードされると，クラスファイルが変更されてもそれは反映されません．
+					HOT deployは，
+				</p>
+</div>
+</div>
+<div class="section"><h2><a name="自動登録"></a>
+自動登録</h2>
+<div class="section"><h3><a name="HOTとCOOLの違い"></a>
+HOTとCOOLの違い</h3>
+</div>
+</div>
+<div class="section"><h2><a name="パッケージ構成"></a>
+パッケージ構成</h2>
+<dl><dt>HOT deploy非対象クラスからHOT deploy対象クラスを参照しない</dt>
+<dd></dd>
+</dl>
+<div class="section"><h3><a name="インフラ層とアプリケーション層"></a>
+インフラ層とアプリケーション層</h3>
+</div>
+<h4>convention.dicon</h4>
+<div class="source"><pre>
+	&lt;component class=&quot;org.seasar.framework.convention.impl.NamingConventionImpl&quot;&gt;
+		&lt;!-- HOT deploy 対象のルートパッケージ --&gt;
+		&lt;initMethod name=&quot;addRootPackageName&quot;&gt;
+			&lt;arg&gt;&quot;jp.co.xxx.yyy.app&quot;&lt;/arg&gt;
+		&lt;/initMethod&gt;
+		&lt;!-- HOT deploy 非対象のルートパッケージ --&gt;
+		&lt;initMethod name=&quot;addRootPackageName&quot;&gt;
+			&lt;arg&gt;&quot;jp.co.xxx.yyy.infra&quot;&lt;/arg&gt;
+			&lt;arg&gt;false&lt;/arg&gt;
+		&lt;/initMethod&gt;
+	&lt;/component&gt;
+</pre>
+</div>
+
+
+
+			HOT deploy対象クラス(Xxx)が非対象クラスから参照されて通常のクラスローダにロードされています。
+
+
+		</div>
+<div class="section"><h2><a name="継承"></a>
+継承</h2>
+<dl><dt>具象クラスから継承しない</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="section"><h2><a name="セッション"></a>
+セッション</h2>
+<dl><dt>セッションに登録するクラスはSerializableを実装する
+				</dt>
+<dd></dd>
+</dl>
+
+
+			HTTPセッションに設定するクラス({0})はシリアライズ可能でなくてはなりません。
+			HTTPセッションに設定するクラスはシリアライズ可能でなくてはなりません。
+			セッションオブジェクト({0})をデシリアライズできなかったため破棄します。
+		</div>
+
+</div><!-- article -->
+
+</div><!-- contents_center -->
+
+<div id="footer">
+<address>  &copy; Copyright 
+                    <a href="http://www.seasarfoundation.org/">The Seasar Foundation</a>.
+            and the others
+    
+              2004-2014,
+        all rights reserved.
+  <a href="http://www.seasar.org">The Seasar Project</a>.
+</address>
+<div class="line"><span class="hide">spacer</span></div>
+</div><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>

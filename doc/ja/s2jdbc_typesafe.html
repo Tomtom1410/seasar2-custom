@@ -1,0 +1,758 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<title>Seasar2 - S2JDBC - タイプセーフAPI</title>
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/main.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/print.css" media="print" />
+<link href="./css/maven-base.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="./css/maven-theme.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="./css/prettify.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="./js/prettify.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div class="line"><span class="hide">spacer</span></div>
+
+<div id="logo"><h1 id="h01" class="hide">The Seasar Project</h1><a href="http://www.seasar.org/" alt="The Seasar Project" title="The Seasar Project"><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Project" width="390" height="180" /></a></div>
+
+<div id="tool">
+
+<h2><a href="http://search.seasar.org/">Site Search</a></h2>
+
+<form id="search" action="http://search.seasar.org/">
+<div>
+	<input id="search_phrase" type="text" name="phrase" size="20" />
+	<input type="hidden" name="perpage" value="30" />
+	<input type="hidden" name="enc" value="UTF-8" />
+	<input id="search_go" type="submit" value="Search" />
+</div>
+</form>
+
+<h2>Seasar Banner</h2>
+            <a href="http://www.seasar.org/" id="bannerLeft">
+    
+                                    <img src="http://www.seasar.org/images/seasar_banner.gif" alt="" />
+    
+            </a>
+      
+</div>
+
+<div id="navi">
+	<p id="navi_left">  
+          <a href="http://www.seasar.org/">Seasar</a>
+              &gt;
+      
+          S2Container
+          </p>
+	<p id="navi_right"><a href="./../en/">English</a> | <a href="./../ja/">Japanese</a></p>
+</div>
+
+</div><!-- header -->
+
+<div id="contents_left">
+           
+  
+
+  
+    
+  
+  
+                   <h2>About</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="index.html">ホーム</a>
+        </li>
+              
+    <li class="none">
+              <a href="license.html">ライセンス</a>
+        </li>
+              
+    <li class="none">
+              <a href="downloads.html">ダウンロード</a>
+        </li>
+              
+    <li class="none">
+              <a href="https://www.seasar.org/issues/browse/CONTAINER">課題追跡</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?ChangeLog%2FSeasar">ChangeLog</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?SeasarUpdateOperationLog">移行ガイド</a>
+        </li>
+          </ul>
+          <h2>ドキュメント</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="documents.html">一覧</a>
+        </li>
+              
+    <li class="none">
+              <a href="setup.html">セットアップ</a>
+        </li>
+              
+    <li class="none">
+              <a href="DIContainer.html">DIContainer</a>
+        </li>
+              
+    <li class="none">
+              <a href="aop.html">AOP</a>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+            
+            
+      
+              
+            <li class="expanded">
+              <a href="s2jdbc.html">S2JDBC</a>
+                <ul>
+                  
+    <li class="none">
+              <a href="s2jdbc_abstract.html">S2JDBCとは</a>
+        </li>
+                  
+    <li class="none">
+              <a href="s2jdbc_tutorial.html">チュートリアル</a>
+        </li>
+                  
+    <li class="none">
+              <a href="s2jdbc_setup.html">セットアップ</a>
+        </li>
+                  
+    <li class="none">
+              <a href="s2jdbc_entity.html">エンティティ</a>
+        </li>
+                  
+                
+              
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="s2jdbc_manager.html">JdbcManager</a>
+              </li>
+                  
+    <li class="none">
+              <a href="s2jdbc_service.html">サービスの作り方</a>
+        </li>
+                  
+    <li class="none">
+              <strong>タイプセーフAPI</strong>
+        </li>
+                  
+    <li class="none">
+              <a href="s2jdbc_other.html">その他の機能</a>
+        </li>
+              </ul>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="s2jdbc_gen/index.html">S2JDBC-Gen</a>
+              </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2Container">FAQ (全般)</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2AOP">FAQ (AOP)</a>
+        </li>
+          </ul>
+          <h2>Javadoc</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../s2-framework/ja/apidocs/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-extension/ja/apidocs/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-tiger/ja/apidocs/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>モジュール</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="index.html">Seasar2</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-framework/ja/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-extension/ja/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../s2-tiger/ja/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>プロジェクト文書</h2>
+        <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="project-info.html">プロジェクト情報</a>
+              </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy" name="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png" />
+          </a>
+                       
+  
+
+  
+    
+  
+  
+  </div><!-- contents_left -->
+
+<div id="contents_center">
+
+<div id="article">
+<div class="section"><h2><a name="タイプセーフAPI"></a>
+タイプセーフAPI</h2>
+<p></p>
+<ul><li><a href="#概要">概要</a>
+</li>
+<li><a href="#Names_クラス">Names クラス</a>
+</li>
+<li><a href="#Operations_クラス">Operations クラス</a>
+</li>
+<li><a href="#Service_クラス">Service クラス</a>
+</li>
+</ul>
+</div>
+<div class="section"><h2><a name="概要"></a>
+概要</h2>
+<p><a href="s2jdbc_manager_auto.html">SQL自動生成による操作</a>
+
+				の
+				<a href="s2jdbc_manager_auto.html#検索条件">検索条件</a>
+
+				や
+				<a href="s2jdbc_manager_auto.html#結合条件">結合条件</a>
+
+				では，
+				<a href="s2jdbc_manager_auto.html#SimpleWhereによる指定">SimpleWhereによる指定</a>
+
+				や
+				<a href="s2jdbc_manager_auto.html#Mapによる指定">Mapによる指定</a>
+
+				ができますが， これらはプロパティ名を文字列で扱うため， 実行するまで名前の間違いに気づきにくくなります．
+				また，
+				プロパティの型と異なる型をパラメータに指定した場合も実行するまで気づきにくくなります．
+			</p>
+<p>
+				S2JDBC のタイプセーフ API を利用すると，
+				プロパティの名前や型の間違いをコンパイル時にチェックできるようになります．
+				タイプセーフ API は，
+				<a href="s2jdbc_gen/index.html">S2JDBC-Gen</a>
+
+				の
+				<a href="s2jdbc_gen/tasks/gen_names.html">Gen-Names</a>
+
+				タスクで生成される
+				<a href="#Names_クラス">Names クラス</a>
+
+				と，
+				S2JDBC が提供する
+				<a href="#Operations_クラス">Operations クラス</a>
+
+				によって構成されます．
+				<a href="s2jdbc_gen/index.html">S2JDBC-Gen</a>
+
+				の
+				<a href="s2jdbc_gen/tasks/gen_service.html">Gen-Service</a>
+
+				タスクによって生成される
+				<a href="#Service_クラス">Service クラス</a>
+
+				クラスを使うと， タイプセーフ API を容易に利用することができます．
+			</p>
+</div>
+<div class="section"><h2><a name="Names_クラス"></a>
+Names クラス</h2>
+<p><code>Names</code>
+				クラスは，
+				<a href="s2jdbc_gen/index.html">S2JDBC-Gen</a>
+
+				の
+				<a href="s2jdbc_gen/tasks/gen_names.html">Gen-Names</a>
+
+				タスクによって生成されるクラスで， エンティティのプロパティに対応した
+				<code>static</code>
+				メソッドが定義されます．
+			</p>
+<p><code>Names</code>
+				クラスのメソッドを static import して使うと，
+				<code>SimpleWhere</code>
+				を使った次の例は，
+			</p>
+<div class="source"><pre>
+jdbcManager.from(Employee.class)
+    .innerJoin(&quot;department&quot;)
+    .where(new SimpleWhere()
+        .eq(&quot;name&quot;, name)
+        .eq(&quot;department.name&quot;, deptName)
+    .getResultList();
+</pre>
+</div>
+<p>
+				次のようになります．
+			</p>
+<div class="source"><pre>
+jdbcManager.from(Employee.class)
+    .innerJoin(department())
+    .where(new SimpleWhere()
+        .eq(name(), name)
+        .eq(department().name(), deptName))
+    .getResultList();
+</pre>
+</div>
+<p><code>name()</code>
+				や
+				<code>department()</code>
+				が static import された
+				<code>Names</code>
+				クラスのメソッドです．
+				メソッド名が間違っているとコンパイルでエラーとなるため，実行する前に間違いを見つけることができます．
+				また，IDE
+				で補完できるため，
+				入力も容易になります (
+				<a href="s2jdbc_gen/setup.html#Organize_Importsの設定">Eclipse で static import を使う場合の設定について</a>
+
+				)．
+			</p>
+<p>
+				関連先のプロパティは
+				<code>department().name()</code>
+				のように指定します．
+				ネストは何段階でも無制限に指定可能です．
+			</p>
+<div class="caution"><div>注意事項</div><p><code>SimpleWhere</code>
+					クラスを使った場合，プロパティの型とパラメータの値の整合性はチェックされません．
+					タイプセーフに使うには，
+					<code>SimpleWhere</code>
+					クラスではなく， 後述の
+					<a href="#Operations_クラス">Operations クラス</a>
+
+					を使用してください．
+				</p>
+</div></div>
+<div class="section"><h2><a name="Operations_クラス"></a>
+Operations クラス</h2>
+<p><code>Operations</code>
+				クラスは S2JDBC が提供するクラスで，FQNは次のとおりです．
+			</p>
+<ul><li><code>org.seasar.extension.jdbc.operation.Operations
+					</code></li>
+</ul>
+<p><code>Operations</code>
+				クラスは
+				<code>SimpleWhere</code>
+				クラスと同じようなメソッドを
+				<code>static</code>
+				メソッドとして提供します．
+				<code>Operations</code>
+				クラスのメソッドを static import し，
+				<code>Names</code>
+				クラスと組み合わせて使用することで，
+				プロパティの型とパラメータの型が適合していることをコンパイル時にチェックすることができます (
+				<a href="s2jdbc_gen/setup.html#Organize_Importsの設定">Eclipse で static import を使う場合の設定について</a>
+
+				)．
+			</p>
+<p><code>SimpleWhere</code>
+				クラスを使った次の例は，
+			</p>
+<div class="source"><pre>
+jdbcManager.from(Employee.class)
+    .where(new SimpleWhere()
+        .eq(&quot;name&quot;, name)
+        .gt(&quot;salary&quot;, salary))
+    .getResultList();
+</pre>
+</div>
+<p><code>Operations</code>
+				クラスのメソッドを static import して使うと次のようになります．
+			</p>
+<div class="source"><pre>
+jdbcManager.from(Employee.class)
+    .where(
+        eq(name(), name),
+        gt(salary(), salary))
+    .getResultList();
+</pre>
+</div>
+<p><code>eq()</code>
+				メソッドや
+				<code>gt()</code>
+				メソッドが
+				<code>Operations</code>
+				クラスのメソッドです．
+				<code>eq()</code>
+				メソッドなどは次のように定義されています．
+			</p>
+<ul><li><code>
+						public static &lt;PropType, ParamType extends PropType&gt;<br />
+ SingleValueOperator eq(PropertyName&lt;PropType&gt; propertyName, ParamType param)
+					</code></li>
+</ul>
+<p><code>Names</code>
+				クラスのメソッドは， プロパティの型を型引数とする
+				<code>PropertyName</code>
+				型を返すように定義されているため， プロパティの型にパラメータの型が代入可能でないとコンパイルでエラーとなります．
+			</p>
+<p><code>Operations</code>
+				クラスには次のメソッドが定義されています．
+			</p>
+<table class="bodyTable"><tbody><tr class="a"><th>メソッド</th>
+<th>説明</th>
+</tr>
+<tr class="b"><td><code>eq(PropertyName&lt;PropType&gt; propertyName, ParamType param)</code></td>
+<td><code>propertyName = ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="a"><td><code>ne(PropertyName&lt;PropType&gt; propertyName, ParamType param)</code></td>
+<td><code>propertyName &lt;&gt; ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="b"><td><code>lt(PropertyName&lt;PropType&gt; propertyName, ParamType param)</code></td>
+<td><code>propertyName &lt; ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="a"><td><code>le(PropertyName&lt;PropType&gt; propertyName, ParamType param)</code></td>
+<td><code>propertyName &lt;= ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="b"><td><code>gt(PropertyName&lt;PropType&gt; propertyName, ParamType param)</code></td>
+<td><code>propertyName &gt; ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="a"><td><code>ge(PropertyName&lt;PropType&gt; propertyName, ParamType param)</code></td>
+<td><code>propertyName &gt;= ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="b"><td><code>in(PropertyName&lt;PropType&gt; propertyName, ParamType... params)</code></td>
+<td><code>propertyName in (?, ...)</code>
+							の条件を追加します．
+							<code>param</code> の配列の長さが <code>0</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="a"><td><code>not in(PropertyName&lt;PropType&gt; propertyName, ParamType... params)</code></td>
+<td><code>
+								propertyName not in (?, ...)
+							</code>
+							の条件を追加します．
+							<code>param</code> の配列の長さが <code>0</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="b"><td><code>like(PropertyName&lt;String&gt; propertyName, String param)</code></td>
+<td><code>propertyName like ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="a"><td><code>like(PropertyName&lt;String&gt; propertyName, String param, char escape)</code></td>
+<td><code>
+								propertyName like ? escape ?
+							</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+						</td>
+</tr>
+<tr class="b"><td><code>starts(PropertyName&lt;String&gt; propertyName, String param)</code></td>
+<td><code>propertyName like ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+							<code>param</code>の末尾に自動的に
+							<code>%</code>
+							が追加されます．
+							<code>param</code>
+							に半角の
+							<code>'%', '_'</code>
+							や全角の
+							<code>'％', '＿'</code>
+							が含まれる場合はエスケープされます．
+						</td>
+</tr>
+<tr class="a"><td><code>ends(PropertyName&lt;String&gt; propertyName, String param)</code></td>
+<td><code>propertyName like ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+							<code>param</code>の先頭に自動的に
+							<code>%</code>
+							が追加されます．
+							<code>param</code>
+							に半角の
+							<code>'%', '_'</code>
+							や全角の
+							<code>'％', '＿'</code>
+							が含まれる場合はエスケープされます．
+						</td>
+</tr>
+<tr class="b"><td><code>contains(PropertyName&lt;String&gt; propertyName, String param)</code></td>
+<td><code>propertyName like ?</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> の時は追加されません．
+							<code>param</code>の先頭と末尾に自動的に
+							<code>%</code>
+							が追加されます．
+							<code>param</code>
+							に半角の
+							<code>'%', '_'</code>
+							や全角の
+							<code>'％', '＿'</code>
+							が含まれる場合はエスケープされます．
+						</td>
+</tr>
+<tr class="a"><td><code>isNull(PropertyName&lt;?&gt; propertyName)</code></td>
+<td><code>propertyName is null</code>
+							の条件を追加します．
+						</td>
+</tr>
+<tr class="b"><td><code>isNull(PropertyName&lt;?&gt; propertyName, Boolean param)</code></td>
+<td><code>propertyName is null</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> あるいは
+							<code>Boolean.FALSE</code> の時は追加されません。
+						</td>
+</tr>
+<tr class="a"><td><code>isNotNull(PropertyName&lt;?&gt; propertyName)</code></td>
+<td><code>propertyName is not null</code>
+							の条件を追加します．
+						</td>
+</tr>
+<tr class="b"><td><code>isNotNull(PropertyName&lt;?&gt; propertyName, Boolan param)</code></td>
+<td><code>propertyName is not null</code>
+							の条件を追加します．
+							<code>param</code> が <code>null</code> あるいは
+							<code>Boolean.FALSE</code> の時は追加されません。
+						</td>
+</tr>
+<tr class="a"><td><code>and(Where... children)</code></td>
+<td>
+							子供の検索条件を <code>AND</code> で結合した条件を追加します．
+						</td>
+</tr>
+<tr class="b"><td><code>or(Where... children)</code></td>
+<td>
+							子供の検索条件を <code>OR</code> で結合した条件を追加します．
+						</td>
+</tr>
+</tbody></table>
+<p><a href="s2jdbc_manager_auto.html#ソート順">ソート順</a>
+
+				で利用するために，以下のメソッドも定義されています．
+			</p>
+<table class="bodyTable"><tbody><tr class="a"><th>メソッド</th>
+<th>説明</th>
+</tr>
+<tr class="b"><td><code>asc(CharSequence propertyName)</code></td>
+<td>
+							昇順のソート順を返します．
+						</td>
+</tr>
+<tr class="a"><td><code>desc(CharSequence propertyName)</code></td>
+<td>
+							降順のソート順を返します．
+						</td>
+</tr>
+</tbody></table>
+<p>
+				これらのメソッドを使うと，次の例は，
+			</p>
+<div class="source"><pre>
+jdbcManager.from(Employee.class)
+    .leftOuterJoin(&quot;department&quot;)
+    .orderBy(&quot;department.name DESC, name&quot;)
+    .getResultList();
+</pre>
+</div>
+<p>
+				次のようになります．
+			</p>
+<div class="source"><pre>
+jdbcManager.from(Employee.class)
+    .leftOuterJoin(department())
+    .orderBy(desc(department().name()), asc(name()))
+    .getResultList();
+</pre>
+</div>
+</div>
+<div class="section"><h2><a name="Service_クラス"></a>
+Service クラス</h2>
+<p><code>Service</code>
+				クラスは，
+				<a href="s2jdbc_gen/index.html">S2JDBC-Gen</a>
+
+				の
+				<a href="s2jdbc_gen/tasks/gen_service.html">Gen-Service</a>
+
+				タスクによって生成されるクラスです．
+				対応するエンティティの
+				<code>names</code>
+				クラスおよび
+				<code>Operations</code>
+				の
+				<code>static</code>
+				メソッドがあらかじめ static import されているため，
+				タイプセーフ API をすぐに利用することができます．
+				<code>Service</code>
+				クラスにあらかじめ生成されている
+				<code>findAllOrderById()</code>
+				メソッドの実装には， タイプセーフ API が使われています．
+			</p>
+<div class="source"><pre>
+    public List&lt;Emp&gt; findAllOrderById() {
+        return select().orderBy(asc(id())).getResultList();
+    }
+</pre>
+</div>
+</div>
+
+</div><!-- article -->
+
+</div><!-- contents_center -->
+
+<div id="footer">
+<address>  &copy; Copyright 
+                    <a href="http://www.seasarfoundation.org/">The Seasar Foundation</a>.
+            and the others
+    
+              2004-2014,
+        all rights reserved.
+  <a href="http://www.seasar.org">The Seasar Project</a>.
+</address>
+<div class="line"><span class="hide">spacer</span></div>
+</div><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>

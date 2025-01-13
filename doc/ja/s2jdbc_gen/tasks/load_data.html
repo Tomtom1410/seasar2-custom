@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<title>Seasar2 - S2JDBC-Gen - Load-Data</title>
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/main.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/print.css" media="print" />
+<link href="../../css/maven-base.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="../../css/maven-theme.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="../../css/prettify.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="../../js/prettify.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div class="line"><span class="hide">spacer</span></div>
+
+<div id="logo"><h1 id="h01" class="hide">The Seasar Project</h1><a href="http://www.seasar.org/" alt="The Seasar Project" title="The Seasar Project"><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Project" width="390" height="180" /></a></div>
+
+<div id="tool">
+
+<h2><a href="http://search.seasar.org/">Site Search</a></h2>
+
+<form id="search" action="http://search.seasar.org/">
+<div>
+	<input id="search_phrase" type="text" name="phrase" size="20" />
+	<input type="hidden" name="perpage" value="30" />
+	<input type="hidden" name="enc" value="UTF-8" />
+	<input id="search_go" type="submit" value="Search" />
+</div>
+</form>
+
+<h2>Seasar Banner</h2>
+            <a href="http://www.seasar.org/" id="bannerLeft">
+    
+                                    <img src="http://www.seasar.org/images/seasar_banner.gif" alt="" />
+    
+            </a>
+      
+</div>
+
+<div id="navi">
+	<p id="navi_left">  
+          <a href="http://www.seasar.org/">Seasar</a>
+              &gt;
+      
+          <a href="../../">S2Container</a>
+          </p>
+	<p id="navi_right"><a href="../../../en/">English</a> | <a href="../../../ja/">Japanese</a></p>
+</div>
+
+</div><!-- header -->
+
+<div id="contents_left">
+           
+  
+
+  
+    
+  
+  
+                   <h2>About</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../../index.html">ホーム</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../license.html">ライセンス</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../downloads.html">ダウンロード</a>
+        </li>
+              
+    <li class="none">
+              <a href="https://www.seasar.org/issues/browse/CONTAINER">課題追跡</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?ChangeLog%2FSeasar">ChangeLog</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?SeasarUpdateOperationLog">移行ガイド</a>
+        </li>
+          </ul>
+          <h2>ドキュメント</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../../documents.html">一覧</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../setup.html">セットアップ</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../DIContainer.html">DIContainer</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../aop.html">AOP</a>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="../../s2jdbc.html">S2JDBC</a>
+              </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+            
+            
+      
+            
+      
+                  
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+              <a href="../../s2jdbc_gen/index.html">S2JDBC-Gen</a>
+                <ul>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/setup.html">セットアップ</a>
+        </li>
+                  
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+            
+            
+      
+            
+      
+              
+            <li class="expanded">
+              <a href="../../s2jdbc_gen/task.html">タスク</a>
+                <ul>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_entity.html">Gen-Entity</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_ddl.html">Gen-Ddl</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/migrate.html">Migrate</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_names.html">Gen-Names</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_service.html">Gen-Service</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_condition.html">Gen-Condition</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_sqlfileconstants.html">Gen-SqlFileConstants</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_entitytest.html">Gen-EntityTest</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_servicetest.html">Gen-ServiceTest</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/gen_sqlfiletest.html">Gen-SqlFileTest</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/dump_dbmeta.html">Dump-DbMeta</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/dump_data.html">Dump-Data</a>
+        </li>
+                  
+    <li class="none">
+              <strong>Load-Data</strong>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/exec_sql.html">Exec-Sql</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/tasks/refresh.html">Refresh</a>
+        </li>
+              </ul>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/entity_definition.html">DDL生成のためのエンティティ定義</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/file_format.html">ファイルの形式</a>
+        </li>
+                  
+    <li class="none">
+              <a href="../../s2jdbc_gen/svn.html">Subversion連携</a>
+        </li>
+              </ul>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2Container">FAQ (全般)</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://www.seasar.org/wiki/index.php?FAQ%2FS2AOP">FAQ (AOP)</a>
+        </li>
+          </ul>
+          <h2>Javadoc</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../../../s2-framework/ja/apidocs/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../../s2-extension/ja/apidocs/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../../s2-tiger/ja/apidocs/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>モジュール</h2>
+        <ul>
+              
+    <li class="none">
+              <a href="../../index.html">Seasar2</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../../s2-framework/ja/index.html">S2-Framework</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../../s2-extension/ja/index.html">S2-Extension</a>
+        </li>
+              
+    <li class="none">
+              <a href="../../../s2-tiger/ja/index.html">S2-Tiger</a>
+        </li>
+          </ul>
+          <h2>プロジェクト文書</h2>
+        <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="../../project-info.html">プロジェクト情報</a>
+              </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy" name="poweredBy">
+            <img alt="Built by Maven" src="../../images/logos/maven-feather.png" />
+          </a>
+                       
+  
+
+  
+    
+  
+  
+  </div><!-- contents_left -->
+
+<div id="contents_center">
+
+<div id="article">
+<div class="section"><h2><a name="Load-Data"></a>
+Load-Data</h2>
+<ul><li><a href="#説明">説明</a>
+<ul><li><a href="#概要">概要</a>
+</li>
+</ul>
+</p>
+</li>
+<li><a href="#パラメータ">パラメータ</a>
+<ul><li><a href="#トップレベルのパラメータ">トップレベルのパラメータ</a>
+</li>
+<li><a href="#ネストした要素として指定されるパラメータ">ネストした要素として指定されるパラメータ</a>
+</li>
+</ul>
+</p>
+</li>
+<li><a href="#例">例</a>
+<ul><li><a href="#バッチサイズを変更する">バッチサイズを変更する</a>
+</li>
+<li><a href="#ロード前に既存データを削除する">ロード前に既存データを削除する</a>
+</li>
+<li><a href="#環境名つきバージョンディレクトリ以下のダンプァイルを優先する">環境名つきバージョンディレクトリ以下のダンプァイルを優先する</a>
+</li>
+</ul>
+</p>
+</li>
+</ul>
+</div>
+<div class="section"><h2><a name="説明"></a>
+説明</h2>
+<div class="section"><h3><a name="概要"></a>
+概要</h3>
+<p>
+					ダンプファイルをデータベースにロードします。
+				</p>
+<p>
+					ロードできるダンプファイルの形式については、<a href="../file_format.html#ダンプファイル">ダンプファイル</a>
+を参照ください。
+				</p>
+<p>
+					このタスクは、外部キー制約の存在を考慮したロードを行いません。
+					外部キー制約を解除した状態でロードを行いたい場合は<a href="migrate.html">Migrate</a>
+タスクを使用することを検討してください。
+				</p>
+</div>
+</div>
+<div class="section"><h2><a name="パラメータ"></a>
+パラメータ</h2>
+<p>
+				Antタスクへのパラメータを以下に示します。
+			</p>
+<div class="section"><h3><a name="トップレベルのパラメータ"></a>
+トップレベルのパラメータ</h3>
+<table class="bodyTable"><tr class="a"><th>属性</th>
+<th>説明</th>
+<th>デフォルト値</th>
+<th>必須</th>
+</tr>
+<tr class="b"><td>classpathDir</td>
+<td>エンティティクラスを含むクラスパスのディレクトリです。このディレクトリはタスクの実行時のクラスパスに含まれている必要があります。</td>
+<td>-</td>
+<td>YES</td>
+</tr>
+<tr class="a"><td>rootPackageName</td>
+<td>ルートパッケージ名です。</td>
+<td>&quot;&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>entityPackageName</td>
+<td>エンティティクラスのパッケージ名です。エンティティクラスは、rootPackageNameとこの値をピリオドで連結したパッケージに配置されているとみなされます。</td>
+<td>&quot;entity&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>entityClassNamePattern</td>
+<td>このタスクで対象とするエンティティクラス名の正規表現です。</td>
+<td>&quot;.*&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>ignoreEntityClassNamePattern</td>
+<td>このタスクで対象としないエンティティクラス名の正規表現です。</td>
+<td>&quot;&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>migrateDir</td>
+<td>マイグレーション用のファイルを管理するディレクトリです。</td>
+<td>&quot;db/migrate&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>ddlInfoFile</td>
+<td>DDLのバージョン番号を管理するファイルです。</td>
+<td>&quot;db/ddl-info.txt&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>versionNoPattern</td>
+<td>バージョン番号のパターンです。バージョン番号に対応するディレクトリ名に使用されます。</td>
+<td>&quot;0000&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>dumpDirName</td>
+<td>ダンプファイルを出力するディレクトリ名です。</td>
+<td>&quot;040-dump&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>dumpDir</td>
+<td>ダンプファイルが格納されているディレクトリです。指定しない場合、migrateDir、ddlInfoFile、versionNoPattern、dumpDirNameにより出力先ディレクトリが決まります。</td>
+<td>-</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>dumpFileEncoding</td>
+<td>ダンプファイルのエンコーディングです。</td>
+<td>&quot;UTF-8&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>loadBatchSize</td>
+<td>ダンプファイルのデータをロードする際のバッチサイズです。</td>
+<td>&quot;10&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>delete</td>
+<td>&quot;true&quot;の場合、ロードの前にデータを削除します。&quot;false&quot;の場合、何もしません。</td>
+<td>&quot;false&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>transactional</td>
+<td>&quot;true&quot;の場合、単一のトランザクションとして実行します。</td>
+<td>&quot;false&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>genDialectClassName</td>
+<td>S2JDBC-Genのダイアレクトインタフェースの実装クラス名です。ここに指定するクラスはorg.seasar.extension.jdbc.gen.dialect.GenDialectインタフェースを実装している必要があります。指定しない場合は<a href="../s2jdbc_setup.html#ダイアレクト">S2JDBCのダイアレクト</a>
+に対応したデフォルトのクラスが使用されます。</td>
+<td>-</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>configPath</td>
+<td>JdbcManagerのコンポーネント定義を含む設定ファイルです。このタスクの実行に使用されます。</td>
+<td>&quot;s2jdbc.dicon&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>env</td>
+<td>環境名です。</td>
+<td>&quot;ut&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>applyEnvToVersion</td>
+<td>バージョンディレクトリに環境名を適用する場合&quot;true&quot;を指定しますを指定します。trueを指定すると、通常のバージョンディレクトリよりも環境名つきバージョンディレクトリに存在するダンプファイルを優先してロードします。dumpDirを指定しない場合にのみ有効です。</td>
+<td>&quot;false&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>jdbcManagerName</td>
+<td>JdbcManagerのコンポーネント名です。接続先のデータベースはJdbcManagerのコンポーネント名によって決まります。</td>
+<td>&quot;jdbcManager&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>factoryClassName</td>
+<td>S2JDBC-Genの公開されたインタフェースの実装を作成するファクトリのクラス名です。S2JDBC-Genをカスタマイズする場合に独自のファクトリクラスを指定できます。ここに指定するクラスはorg.seasar.extension.jdbc.gen.internal.factory.Factoryインタフェースを実装している必要があります。</td>
+<td>&quot;org.seasar.extension.jdbc.gen<br />
+.internal.factory.FactoryImpl&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="b"><td>commandInvokerClassName</td>
+<td>S2JDBC-Genのコマンドを呼び出すクラスの名前です。コマンドの呼び出し前後で任意の処理を実行したい場合に指定します。ここに指定するクラスはorg.seasar.extension.jdbc.gen.command.CommandInvokerインタフェースを実装している必要があります。</td>
+<td>&quot;org.seasar.extension.jdbc.gen<br />
+.internal.command.CommandInvokerImpl&quot;</td>
+<td>NO</td>
+</tr>
+<tr class="a"><td>classpath</td>
+<td>このタスクを実行する際のクラスパスです。</td>
+<td>-</td>
+<td>classpathrefが指定されていない場合YES</td>
+</tr>
+<tr class="b"><td>classpathref</td>
+<td>このタスクを実行する際のクラスパスの参照です。</td>
+<td>-</td>
+<td>classpathが指定されていない場合YES</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="ネストした要素として指定されるパラメータ"></a>
+ネストした要素として指定されるパラメータ</h3>
+<h4>
+					jvmArg
+				</h4>
+<p>
+					このタスクの大部分の処理は別VMで行われます。VMに引数を渡す場合は&lt;jvmarg&gt;要素を使用します。
+					これはAntのJavaタスクで使用できる&lt;jvmarg&gt;と同じです。
+					使用可能な属性やネストした要素についてはAntのドキュメントを参照してください。
+				</p>
+</div>
+</div>
+<div class="section"><h2><a name="例"></a>
+例</h2>
+<div class="section"><h3><a name="バッチサイズを変更する"></a>
+バッチサイズを変更する</h3>
+<p>
+					バッチサイズを変更してタスクを実行します。
+				</p>
+<div class="source"><pre>&lt;load-data
+    classpathDir=&quot;build/classes&quot;
+    rootPackageName=&quot;examples&quot;
+    loadBatchSize=&quot;20&quot;
+    classpathRef=&quot;classpath&quot;
+/&gt;</pre>
+</div>
+</div>
+<div class="section"><h3><a name="ロード前に既存データを削除する"></a>
+ロード前に既存データを削除する</h3>
+<p>
+					ロード前に既存データを削除するには、delete属性に&quot;true&quot;を指定します。
+				</p>
+<div class="source"><pre>&lt;load-data
+    classpathDir=&quot;build/classes&quot;
+    rootPackageName=&quot;examples&quot;
+    delete=&quot;true&quot;
+    classpathRef=&quot;classpath&quot;
+/&gt;</pre>
+</div>
+<p>
+					delete属性に&quot;true&quot;を指定すると、全データを削除する「delete from ...」のSQLがロード前に実行されるようになります。
+				</p>
+</div>
+<div class="section"><h3><a name="環境名つきバージョンディレクトリ以下のダンプァイルを優先する"></a>
+環境名つきバージョンディレクトリ以下のダンプァイルを優先する</h3>
+<p>
+					applyEnvToVersion属性に&quot;true&quot;を指定すると、環境名つきバージョンディレクトリ以下に同名の相対パスで表されるファイルがあれば、そちらが優先されるようになります。
+					設定例は次の通りです。
+				</p>
+<div class="source"><pre>&lt;load-data
+    classpathDir=&quot;build/classes&quot;
+    rootPackageName=&quot;examples&quot;
+    applyEnvToVersion=&quot;true&quot;
+    env=&quot;ut&quot;
+    classpathRef=&quot;classpath&quot;
+/&gt;</pre>
+</div>
+<p>
+					環境名つきバージョンディレクトリとは、バージョン名と環境名を#で連結したディレクトリのことです。
+					次の図で言えば、0001#utがバージョンディレクトリになります。
+				</p>
+<div class="source"><pre>db
+└─migrate
+    ├─0001
+    │  └─create
+    │      └─040-dump
+    │          ├─employee.csv
+    │          └─address.csv
+    │          └─..
+    └─0001#ut
+        └─create
+            └─040-dump
+                └─employee.csv</pre>
+</div>
+<p>
+					この例では、employee.csvについては0001#utディレクトリ以下のものが使用され、
+					0001ディレクトリ以下にあるemployee.csvは参照されません。
+					address.csvについては0001ディレクトリ以下にあるものが使用されます。
+				</p>
+<p>
+					環境名つきバージョンディレクトリ以下のダンプデータは、<a href="dump_data.html">Dump-Dataタスク</a>
+により作成できます。
+				</p>
+</div>
+</div>
+
+</div><!-- article -->
+
+</div><!-- contents_center -->
+
+<div id="footer">
+<address>  &copy; Copyright 
+                    <a href="http://www.seasarfoundation.org/">The Seasar Foundation</a>.
+            and the others
+    
+              2004-2014,
+        all rights reserved.
+  <a href="http://www.seasar.org">The Seasar Project</a>.
+</address>
+<div class="line"><span class="hide">spacer</span></div>
+</div><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>
